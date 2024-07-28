@@ -12044,10 +12044,10 @@ MonoBehaviour:
   SegmentScale: 0.01
   CollisionLayers:
     serializedVersion: 2
-    m_Bits: 259
+    m_Bits: 267
   ValidLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   ControlType: 0
   InitiateTeleportAction: {fileID: 1263111715868034790, guid: e39f4b35a6db18348b41eb0262520e69,
     type: 3}

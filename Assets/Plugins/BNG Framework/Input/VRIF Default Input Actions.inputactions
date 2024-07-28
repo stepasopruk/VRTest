@@ -486,6 +486,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "27c0e0c7-8a61-42cb-8b36-f86f10391674",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>{LeftHand}/primarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "2D Vector Keyboard",
                     "id": "146a3d26-d500-465d-b918-3d044f109140",
                     "path": "2DVector",
