@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadSceneButton : ButtonUIViewBase
+namespace VRTest.Core.UI
 {
-    [SerializeField] private string sceneName;
-
-    protected override void OnClick()
+    public sealed class LoadSceneButton : ButtonUIViewBase
     {
-        SceneManager.LoadScene(sceneName);
+        [SerializeField] private string sceneName;
+
+        protected override void OnClick()
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

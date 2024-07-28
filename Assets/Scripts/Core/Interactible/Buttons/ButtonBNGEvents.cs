@@ -1,11 +1,14 @@
 using System;
 
-public class ButtonBNGEvents : ButtonBNGViewBase, IButtonCliked
+namespace VRTest.Core.Interactible
 {
-    public event Action Clicked;
-
-    protected override void OnButtonDown()
+    public class ButtonBNGEvents : ButtonBNGViewBase, IButtonCliked
     {
-        Clicked?.Invoke();
+        public event Action Clicked;
+
+        protected override void OnButtonDown()
+        {
+            Clicked?.Invoke();
+        }
     }
 }

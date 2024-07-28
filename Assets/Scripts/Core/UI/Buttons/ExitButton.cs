@@ -4,16 +4,19 @@ using UnityEditor;
 
 using UnityEngine;
 
-public class ExitButton : ButtonUIViewBase
+namespace VRTest.Core.UI
 {
-    protected override void OnClick()
+    public sealed class ExitButton : ButtonUIViewBase
     {
+        protected override void OnClick()
+        {
 
 #if UNITY_EDITOR
-        if (EditorApplication.isPlaying)
-            EditorApplication.ExitPlaymode();
+            if (EditorApplication.isPlaying)
+                EditorApplication.ExitPlaymode();
 #endif
 
-        Application.Quit();
+            Application.Quit();
+        }
     }
 }

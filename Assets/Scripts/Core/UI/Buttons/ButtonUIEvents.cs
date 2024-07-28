@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 
-public class ButtonUIEvents : ButtonUIViewBase, IButtonCliked
+namespace VRTest.Core.UI
 {
-    public event Action Clicked;
-
-    protected override void OnClick()
+    public sealed class ButtonUIEvents : ButtonUIViewBase, IButtonCliked
     {
-        Clicked?.Invoke();
+        public event Action Clicked;
+
+        protected override void OnClick()
+        {
+            Clicked?.Invoke();
+        }
     }
 }
