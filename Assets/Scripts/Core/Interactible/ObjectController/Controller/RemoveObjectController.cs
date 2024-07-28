@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace VRTest.Core.Interactible
+namespace VRTest.Core.Interactable
 {
-    public sealed class RemoveObjectController : OjectButtonsGroup
+    public sealed class RemoveObjectController : ObjectButtonsGroup
     {
         [SerializeField] private List<Transform> parentsTransform;
 

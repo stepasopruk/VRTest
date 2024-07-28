@@ -1,6 +1,6 @@
 using System;
 
-namespace VRTest.Core.Interactible
+namespace VRTest.Core.Interactable
 {
     public class ButtonBNGEvents : ButtonBNGViewBase, IButtonCliked
     {

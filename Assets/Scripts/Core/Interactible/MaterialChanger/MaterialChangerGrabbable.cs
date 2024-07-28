@@ -2,7 +2,7 @@ using BNG;
 using UnityEngine;
 using VRTest.Data;
 
-namespace VRTest.Core.Interactible
+namespace VRTest.Core.Interactable
 {
     [RequireComponent(typeof(MeshRenderer))]
     public sealed class MaterialChangerGrabbable : GrabbableEvents

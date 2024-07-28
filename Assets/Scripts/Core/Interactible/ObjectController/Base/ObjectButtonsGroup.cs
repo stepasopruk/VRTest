@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using VRTest.Core.UI;
 
-namespace VRTest.Core.Interactible
+namespace VRTest.Core.Interactable
 {
-    public abstract class OjectButtonsGroup : MonoBehaviour
+    public abstract class ObjectButtonsGroup : MonoBehaviour
     {
         [SerializeField] private ButtonUIEvents buttonUI;
         [SerializeField] private ButtonBNGEvents buttonBNG;

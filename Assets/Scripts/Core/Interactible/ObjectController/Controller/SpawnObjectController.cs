@@ -2,9 +2,9 @@
 using UnityEngine;
 using VRTest.Data;
 
-namespace VRTest.Core.Interactible
+namespace VRTest.Core.Interactable
 {
-    public sealed class SpawnObjectController : OjectButtonsGroup
+    public sealed class SpawnObjectController : ObjectButtonsGroup
     {
         [SerializeField] private List<MaterialObjectData> materialObjectDatas;
 

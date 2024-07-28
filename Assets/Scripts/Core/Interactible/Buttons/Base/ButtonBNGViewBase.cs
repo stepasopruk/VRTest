@@ -1,7 +1,7 @@
 using BNG;
 using UnityEngine;
 
-namespace VRTest.Core.Interactible
+namespace VRTest.Core.Interactable
 {
     [RequireComponent(typeof(Button))]
     public abstract class ButtonBNGViewBase : MonoBehaviour
