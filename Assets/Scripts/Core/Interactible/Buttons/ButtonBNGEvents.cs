@@ -1,6 +1,6 @@
 using System;
 
-public class ButtonBNG : ButtonBNGViewBase, IButtonCliked
+public class ButtonBNGEvents : ButtonBNGViewBase, IButtonCliked
 {
     public event Action Clicked;
 

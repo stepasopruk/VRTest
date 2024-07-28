@@ -2,8 +2,8 @@
 
 public abstract class OjectButtonsGroup : MonoBehaviour
 {
-    [SerializeField] private ButtonUI buttonUI;
-    [SerializeField] private ButtonBNG buttonBNG;
+    [SerializeField] private ButtonUIEvents buttonUI;
+    [SerializeField] private ButtonBNGEvents buttonBNG;
 
     protected virtual void Awake()
     {
