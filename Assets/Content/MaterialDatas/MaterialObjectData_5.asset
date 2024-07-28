@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5ae27d817c17f478bd4fb5aff9d32a, type: 3}
+  m_Name: MaterialObjectData_5
+  m_EditorClassIdentifier: 
+  standartMaterials:
+  - {fileID: 2100000, guid: f2f40ac28fd952a45a642fc1b37add6c, type: 2}
+  selectedMaterials:
+  - {fileID: 2100000, guid: ec4d44f7631b5254e86df1d84bf4739f, type: 2}
+  hoverMaterials:
+  - {fileID: 2100000, guid: 6bfcaa8e695dcfb468649895181b446a, type: 2}
