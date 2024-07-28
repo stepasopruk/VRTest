@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [CreateAssetMenu(fileName = "MaterialObjectData", menuName = "ScriptableObjects/AddMaterialObjectData", order = 1)]
 public class MaterialObjectData : ScriptableObject
 {
@@ -13,3 +14,4 @@ public class MaterialObjectData : ScriptableObject
     public Material[] SelectedMaterials => selectedMaterials.ToArray();
     public Material[] HoverMaterials => hoverMaterials.ToArray();
 }
+

@@ -374,11 +374,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247846209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08525808, y: 1.1718725, z: 0.50754374}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 934017839}
+  - {fileID: 1459325088}
+  - {fileID: 387688619}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -689,6 +691,55 @@ Transform:
   m_Father: {fileID: 2088416251}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &387688618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387688619}
+  - component: {fileID: 387688620}
+  m_Layer: 0
+  m_Name: RemoveObjectController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &387688619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387688618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 247846210}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387688620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387688618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeffc96c073cc394a9e6184c13e927fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonUI: {fileID: 2121528522}
+  buttonBNG: {fileID: 759343160}
+  parentsTransform:
+  - {fileID: 1345519000}
+  - {fileID: 390239300}
 --- !u!1 &390239299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,8 +1337,9 @@ GameObject:
   - component: {fileID: 636496238}
   - component: {fileID: 636496237}
   - component: {fileID: 636496236}
+  - component: {fileID: 636496239}
   m_Layer: 5
-  m_Name: AddSphereButton
+  m_Name: SpawnSphereButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1397,6 +1449,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636496234}
   m_CullTransparentMesh: 0
+--- !u!114 &636496239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636496234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1acc34a288060a4c8bd578f47358ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &652195446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1627,8 +1691,9 @@ GameObject:
   - component: {fileID: 759343154}
   - component: {fileID: 759343153}
   - component: {fileID: 759343152}
+  - component: {fileID: 759343160}
   m_Layer: 0
-  m_Name: InnerButton
+  m_Name: RemoveObjectsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1893,6 +1958,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759343150}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &759343160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759343150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74022707a9f6dd41982bd9573add53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &791459516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2902,7 +2979,7 @@ GameObject:
   - component: {fileID: 1124050243}
   - component: {fileID: 1124050242}
   m_Layer: 0
-  m_Name: ButtonAddSphere
+  m_Name: SpawnSphereButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3156,7 +3233,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &1124050249
 BoxCollider:
@@ -3488,8 +3565,9 @@ GameObject:
   - component: {fileID: 1283485977}
   - component: {fileID: 1283485976}
   - component: {fileID: 1283485975}
+  - component: {fileID: 1283485978}
   m_Layer: 5
-  m_Name: AddCubeButton
+  m_Name: SpawnCubeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3599,6 +3677,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283485973}
   m_CullTransparentMesh: 0
+--- !u!114 &1283485978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283485973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1acc34a288060a4c8bd578f47358ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1321504479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3970,6 +4060,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1444740911}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1459325087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459325088}
+  - component: {fileID: 1459325090}
+  - component: {fileID: 1459325089}
+  m_Layer: 0
+  m_Name: SpawnObjectController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459325088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459325087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 247846210}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1459325089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459325087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0713d4888a1142ad64daaa97ac3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonUI: {fileID: 636496239}
+  buttonBNG: {fileID: 1470113947}
+  materialObjectDatas:
+  - {fileID: 11400000, guid: d0fa12c4be31b10449f2e76a01a6e92c, type: 2}
+  - {fileID: 11400000, guid: 1fb1b6b32588d014d8c86fd7cfe3f9c3, type: 2}
+  - {fileID: 11400000, guid: db055b808dbcded4eb7af3cc0a058a84, type: 2}
+  - {fileID: 11400000, guid: bc3642efa572a1f41bf484fd6490064d, type: 2}
+  - {fileID: 11400000, guid: 8fb786dd0a17a9d46976ce53da5ee3a1, type: 2}
+  spawnPoint: {fileID: 1754637816}
+  parentTransform: {fileID: 390239300}
+  objectPrefab: {fileID: 3713117534019173729, guid: 9f36c705c3603044bae4beb4a3c88c43,
+    type: 3}
+--- !u!114 &1459325090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459325087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f0713d4888a1142ad64daaa97ac3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonUI: {fileID: 1283485978}
+  buttonBNG: {fileID: 6180504718120428752}
+  materialObjectDatas:
+  - {fileID: 11400000, guid: d0fa12c4be31b10449f2e76a01a6e92c, type: 2}
+  - {fileID: 11400000, guid: 1fb1b6b32588d014d8c86fd7cfe3f9c3, type: 2}
+  - {fileID: 11400000, guid: db055b808dbcded4eb7af3cc0a058a84, type: 2}
+  - {fileID: 11400000, guid: bc3642efa572a1f41bf484fd6490064d, type: 2}
+  - {fileID: 11400000, guid: 8fb786dd0a17a9d46976ce53da5ee3a1, type: 2}
+  spawnPoint: {fileID: 1046106885}
+  parentTransform: {fileID: 1345519000}
+  objectPrefab: {fileID: 7697477814288693149, guid: 8b96d70da993fb943b43a31b58d07480,
+    type: 3}
 --- !u!1 &1470113937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3987,8 +4158,9 @@ GameObject:
   - component: {fileID: 1470113941}
   - component: {fileID: 1470113940}
   - component: {fileID: 1470113939}
+  - component: {fileID: 1470113947}
   m_Layer: 0
-  m_Name: InnerButton
+  m_Name: SpawnSphereButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4253,6 +4425,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470113937}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1470113947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470113937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74022707a9f6dd41982bd9573add53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1498683810
 GameObject:
   m_ObjectHideFlags: 0
@@ -5580,7 +5764,7 @@ GameObject:
   - component: {fileID: 2007395535}
   - component: {fileID: 2007395534}
   m_Layer: 0
-  m_Name: ButtonRemoveObjects
+  m_Name: RemoveObjectsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5834,7 +6018,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &2007395541
 BoxCollider:
@@ -6177,6 +6361,7 @@ GameObject:
   - component: {fileID: 2121528521}
   - component: {fileID: 2121528520}
   - component: {fileID: 2121528519}
+  - component: {fileID: 2121528522}
   m_Layer: 5
   m_Name: RemoveObjectsButton
   m_TagString: Untagged
@@ -6288,6 +6473,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121528517}
   m_CullTransparentMesh: 0
+--- !u!114 &2121528522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121528517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1acc34a288060a4c8bd578f47358ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &7679726449218693
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -52133,13 +52330,26 @@ GameObject:
   - component: {fileID: 579133494667918231}
   - component: {fileID: 579133494667918230}
   - component: {fileID: 579133494667918233}
+  - component: {fileID: 6180504718120428752}
   m_Layer: 0
-  m_Name: InnerButton
+  m_Name: SpawnCubeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6180504718120428752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6180504718120428751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74022707a9f6dd41982bd9573add53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6180504719048538536
 GameObject:
   m_ObjectHideFlags: 0
@@ -52158,7 +52368,7 @@ GameObject:
   - component: {fileID: 2923167874772254333}
   - component: {fileID: 2923167874772254334}
   m_Layer: 0
-  m_Name: ButtonAddCube
+  m_Name: SpawnCubeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52291,7 +52501,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &6180504719048538541
 MonoBehaviour:

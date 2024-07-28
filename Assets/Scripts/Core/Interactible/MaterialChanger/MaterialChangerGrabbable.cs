@@ -39,7 +39,12 @@ public sealed class MaterialChangerGrabbable : GrabbableEvents
     private void Start()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
-        _meshRenderer.materials = materialData.StandartMaterials;
+        SetStandartMaterial();
+    }
+
+    public void SetData(MaterialObjectData data)
+    {
+        materialData = data;
     }
 
     public override void OnGrab(Grabber grabber) 
@@ -60,8 +65,19 @@ public sealed class MaterialChangerGrabbable : GrabbableEvents
     public override void OnRelease() 
         => IsSelect = false;
 
+    private void SetStandartMaterial()
+    {
+        if (materialData == null)
+            return;
+
+        _meshRenderer.materials = materialData.StandartMaterials;
+    }
+
     private void ChangeMaterial()
     {
+        if (materialData == null)
+            return;
+
         _meshRenderer.materials =
             IsSelect ? materialData.SelectedMaterials :
             IsHover ? materialData.HoverMaterials :
