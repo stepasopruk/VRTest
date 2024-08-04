@@ -2,6 +2,7 @@
 {
     public enum KeyboardLayout
     {
+        Universal,
         Ru,
         Eng
     }
