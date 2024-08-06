@@ -1,8 +1,7 @@
 ﻿public sealed class KeyShiftButton : KeySpecialButton
 {
-    protected override void OnClick()
+    protected override void KeyPress(bool isOn)
     {
-        base.OnClick();
-        specialKeyHandler.ShiftPress(_isOn);
+        specialKeyHandler.ShiftPress(isOn);
     }
 }

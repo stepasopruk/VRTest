@@ -10,11 +10,6 @@ public sealed class KeySymbolButton : KeyButton
         base.Awake();
         Text = keySymbolData.Key.ToString();
     }
-
-    public override void SetKeyLayout(KeyboardLayout keyboardLayout)
-    {
-        return;
-    }
 }
 
 

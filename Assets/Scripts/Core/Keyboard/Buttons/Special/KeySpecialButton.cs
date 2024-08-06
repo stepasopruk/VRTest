@@ -1,12 +1,17 @@
 ﻿using VRTest.Core.UI;
 using Zenject;
 
-public class KeySpecialButton : ButtonUIViewBase
+public abstract class KeySpecialButton : ButtonUIViewBase
 {
     [Inject] protected readonly ISpecialKeyHandler specialKeyHandler;
-    protected bool _isOn = false;
-    protected override void OnClick() 
+
+    private bool _isOn = false;
+
+    protected override void OnClick()
     {
         _isOn = !_isOn;
+        KeyPress(_isOn);
     }
+
+    protected abstract void KeyPress(bool isOn);
 }

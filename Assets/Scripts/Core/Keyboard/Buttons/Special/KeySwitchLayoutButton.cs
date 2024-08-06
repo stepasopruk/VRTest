@@ -1,8 +1,7 @@
 ﻿public sealed class KeySwitchLayoutButton : KeySpecialButton
 {
-    protected override void OnClick()
+    protected override void KeyPress(bool isOn)
     {
-        base.OnClick();
-        specialKeyHandler.SwitchLayoutPress(_isOn);
+        specialKeyHandler.SwitchLayoutPress(isOn);
     }
 }

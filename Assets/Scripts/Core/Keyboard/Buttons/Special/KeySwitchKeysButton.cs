@@ -1,8 +1,8 @@
-﻿public sealed class KeySwitchKeysButton : KeySpecialButton
+﻿
+public sealed class KeySwitchKeysButton : KeySpecialButton
 {
-    protected override void OnClick()
+    protected override void KeyPress(bool isOn)
     {
-        base.OnClick();
-        specialKeyHandler.SwitchKeysPress(_isOn);
+        specialKeyHandler.SwitchKeysPress(isOn);
     }
 }

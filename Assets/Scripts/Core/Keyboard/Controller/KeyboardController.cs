@@ -2,10 +2,8 @@
 using System;
 using UnityEngine;
 
-public class KeyboardController : MonoBehaviour, IKeyboardLayout, ILayoutSwitchEvent
+public class KeyboardController : MonoBehaviour, IKeyboardController
 {
-    public event Action<KeyboardLayout> LayoutChanged;
-
     [SerializeField] private KeyboardView keyboardView;
 
     private KeyboardLayout _layout;
@@ -18,7 +16,21 @@ public class KeyboardController : MonoBehaviour, IKeyboardLayout, ILayoutSwitchE
                 return;
 
             _layout = value;
-            LayoutChanged?.Invoke(_layout);
+            keyboardView.SwitchLayout(_layout);
+        }
+    }
+
+    private bool _isSymbolKeys;
+    public bool IsSymbolKeys
+    {
+        get => _isSymbolKeys;
+        set
+        {
+            if (_isSymbolKeys == value)
+                return;
+
+            _isSymbolKeys = value;
+            keyboardView.SwitchKeys(_isSymbolKeys);
         }
     }
 

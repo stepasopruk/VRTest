@@ -1,17 +1,12 @@
 ﻿using KeyboardVR;
 using UnityEngine;
+using Zenject;
 
 public sealed class KeyLetterButton : KeyButton
 {
     [SerializeField] private KeyLetterData keyLetterData;
 
-    protected override void Awake()
-    {
-        base.Awake();
-        SetKeyLayout(KeyboardLayout.Eng);
-    }
-
-    public override void SetKeyLayout(KeyboardLayout keyboardLayout)
+    public void SetKeyLayout(KeyboardLayout keyboardLayout)
     {
         ActiveButton(keyboardLayout);
         Text = keyLetterData.GetKeyLayout(keyboardLayout).KeyLetter.ToString();

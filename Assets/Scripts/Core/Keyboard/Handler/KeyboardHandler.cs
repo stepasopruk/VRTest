@@ -2,7 +2,7 @@
 
 public sealed class KeyboardHandler : IKeyHandler, ISpecialKeyHandler, IOperatingKeyHandler
 {
-    [Inject] private readonly IKeyboardLayout keyboardLayout;
+    [Inject] private readonly IKeyboardController keyboardController;
 
     public void KeyPress(char key)
     {
@@ -16,15 +16,12 @@ public sealed class KeyboardHandler : IKeyHandler, ISpecialKeyHandler, IOperatin
 
     public void SwitchLayoutPress(bool isOn)
     {
-        if (isOn)
-            keyboardLayout.Layout = KeyboardVR.KeyboardLayout.Ru;
-        else
-            keyboardLayout.Layout = KeyboardVR.KeyboardLayout.Eng;
+        keyboardController.Layout = isOn ? KeyboardVR.KeyboardLayout.Ru : KeyboardVR.KeyboardLayout.Eng;
     }
 
     public void SwitchKeysPress(bool isOn)
     {
-
+        keyboardController.IsSymbolKeys = !isOn;
     }
 
     public void BackspacePress()

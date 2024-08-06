@@ -8,7 +8,7 @@ public class KeyboardControllerInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container
-            .BindInterfacesTo<KeyboardController>()
+            .Bind<IKeyboardController>()
             .FromInstance(keyboardController)
             .AsSingle()
             .NonLazy();
