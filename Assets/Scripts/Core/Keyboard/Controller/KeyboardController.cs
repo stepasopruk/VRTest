@@ -1,5 +1,5 @@
 ﻿using KeyboardVR;
-using System;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class KeyboardController : MonoBehaviour, IKeyboardController
@@ -20,17 +20,17 @@ public class KeyboardController : MonoBehaviour, IKeyboardController
         }
     }
 
-    private bool _isSymbolKeys;
-    public bool IsSymbolKeys
+    private KeyKitType _setKey;
+    public KeyKitType KeySet
     {
-        get => _isSymbolKeys;
+        get => _setKey;
         set
         {
-            if (_isSymbolKeys == value)
+            if (_setKey == value)
                 return;
 
-            _isSymbolKeys = value;
-            keyboardView.SwitchKeys(_isSymbolKeys);
+            _setKey = value;
+            keyboardView.SwitchKeys(_setKey);
         }
     }
 

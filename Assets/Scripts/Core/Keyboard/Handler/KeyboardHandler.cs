@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using KeyboardVR;
+using Zenject;
 
 public sealed class KeyboardHandler : IKeyHandler, ISpecialKeyHandler, IOperatingKeyHandler
 {
@@ -14,14 +15,14 @@ public sealed class KeyboardHandler : IKeyHandler, ISpecialKeyHandler, IOperatin
 
     }
 
-    public void SwitchLayoutPress(bool isOn)
+    public void SwitchLayoutPress(KeyboardLayout keyboardLayout)
     {
-        keyboardController.Layout = isOn ? KeyboardVR.KeyboardLayout.Ru : KeyboardVR.KeyboardLayout.Eng;
+        keyboardController.Layout = keyboardLayout;
     }
 
-    public void SwitchKeysPress(bool isOn)
+    public void SwitchKeysPress(KeyKitType keyboardSetKey)
     {
-        keyboardController.IsSymbolKeys = !isOn;
+        keyboardController.KeySet = keyboardSetKey;
     }
 
     public void BackspacePress()

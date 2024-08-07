@@ -14,13 +14,9 @@ public sealed class KeyboardView : MonoBehaviour
             keyLetterButton.SetKeyLayout(layout);
     }
 
-    public void SwitchKeys(bool isSymbolKeys)
+    public void SwitchKeys(KeyKitType keyboardSetKey)
     {
-        foreach (KeySymbolButton keySymbolButton in symbolKeys)
-            keySymbolButton.gameObject.SetActive(isSymbolKeys);
-
-        foreach (KeyLetterButton keyLetterButton in letterkeys)
-            keyLetterButton.gameObject.SetActive(!isSymbolKeys);
+        
     }
 
 }

@@ -6,4 +6,10 @@
         Ru,
         Eng
     }
+
+    public enum KeyKitType
+    {
+        Letters,
+        Symbols
+    }
 }

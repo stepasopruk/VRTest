@@ -3,13 +3,20 @@ using Zenject;
 
 public class KeyboardControllerInstaller : MonoInstaller
 {
-    [SerializeField] private KeyboardController keyboardController;
+    [SerializeField] private KeyboardKeyKitController keyboardKeyKitController;
+    [SerializeField] private KeyboardLayoutController keyboardLayoutController;
 
     public override void InstallBindings()
     {
         Container
-            .Bind<IKeyboardController>()
-            .FromInstance(keyboardController)
+            .Bind<IKeyboardKeyKitController>()
+            .FromInstance(keyboardKeyKitController)
+            .AsSingle()
+            .NonLazy();
+
+        Container
+            .Bind<IKeyboardLayoutController>()
+            .FromInstance(keyboardLayoutController)
             .AsSingle()
             .NonLazy();
     }
