@@ -12,9 +12,29 @@ public class KeyButton : ButtonUIViewBase
 
     [SerializeField] private TextMeshProUGUI buttonText;
 
+    protected bool _isActive;
+
+    public bool IsActive
+    {
+        get => _isActive;
+        set
+        {
+            if (value)
+                gameObject.SetActive(_isActive);
+            else
+                gameObject.SetActive(false);
+        }
+    }
+
     private void OnValidate()
     {
         buttonText ??= GetComponentInChildren<TextMeshProUGUI>();
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _isActive = gameObject.activeSelf;
     }
 
     public string Text

@@ -43,9 +43,9 @@ public class KeyboardKeyKitController : MonoBehaviour, IKeyboardKeyKitController
         KeyButton[] inactiveAllKeys = allKeys.Except(activeAllKeys).ToArray();
 
         foreach (KeyButton keyButton in inactiveAllKeys)
-            keyButton.gameObject.SetActive(false);
+            keyButton.IsActive = false;
 
         foreach (KeyButton keyButton in activeAllKeys)
-            keyButton.gameObject.SetActive(true);
+            keyButton.IsActive = true;
     }
 }

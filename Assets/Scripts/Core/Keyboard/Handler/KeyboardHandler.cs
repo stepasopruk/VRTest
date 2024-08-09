@@ -3,7 +3,8 @@ using Zenject;
 
 public sealed class KeyboardHandler : IKeyHandler, ISpecialKeyHandler, IOperatingKeyHandler
 {
-    [Inject] private readonly IKeyboardController keyboardController;
+    [Inject] private readonly IKeyboardLayoutController keyboardLayoutController;
+    [Inject] private readonly IKeyboardKeyKitController keyboardKeyKitController;
 
     public void KeyPress(char key)
     {
@@ -17,12 +18,12 @@ public sealed class KeyboardHandler : IKeyHandler, ISpecialKeyHandler, IOperatin
 
     public void SwitchLayoutPress(KeyboardLayout keyboardLayout)
     {
-        keyboardController.Layout = keyboardLayout;
+        keyboardLayoutController.SetLayoutKeyboard(keyboardLayout);
     }
 
-    public void SwitchKeysPress(KeyKitType keyboardSetKey)
+    public void SwitchKeysPress(KeyKitType keyboardKeyKit)
     {
-        keyboardController.KeySet = keyboardSetKey;
+        keyboardKeyKitController.SetKeyKitType(keyboardKeyKit);
     }
 
     public void BackspacePress()

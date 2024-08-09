@@ -18,9 +18,11 @@ public sealed class KeyLetterButton : KeyButton
     private void ActiveButton(KeyboardLayout keyboardLayout)
     {
         if (keyLetterData.GetKeyLayout(keyboardLayout).KeyboardLayout == keyboardLayout)
-            gameObject.SetActive(true);
+            _isActive = true;
         else
-            gameObject.SetActive(false);
+            _isActive = false;
+
+        IsActive = _isActive;
     }
 }
 

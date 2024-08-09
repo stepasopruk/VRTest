@@ -1,5 +1,6 @@
 ﻿using KeyboardVR;
 using System;
+using System.Linq;
 using UnityEngine;
 
 public class KeyboardLayoutController : MonoBehaviour, IKeyboardLayoutController
@@ -9,6 +10,11 @@ public class KeyboardLayoutController : MonoBehaviour, IKeyboardLayoutController
     public event Action<KeyboardLayout> LayoutChanged;
 
     private KeyboardLayout _layout;
+
+    private void OnValidate()
+    {
+        letterkeys ??= FindObjectsOfType<KeyLetterButton>().ToArray();
+    }
 
     public void SetLayoutKeyboard(KeyboardLayout layout)
     {
